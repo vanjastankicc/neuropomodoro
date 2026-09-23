@@ -11,7 +11,7 @@ be ignored, which matters for a system that is sometimes wrong.
 
 Built as a diploma thesis at Računarski fakultet, Univerzitet Union, Belgrade.
 
-![System in use](images/states.png)
+![System in use](images/logo.png)
 
 ## How it works
 
