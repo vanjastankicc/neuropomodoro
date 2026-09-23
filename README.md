@@ -11,29 +11,11 @@ be ignored, which matters for a system that is sometimes wrong.
 
 Built as a diploma thesis at Računarski fakultet, Univerzitet Union, Belgrade.
 
-<!-- ![System in use](images/states.jpg) -->
+![System in use](images/states.jpg)
 
 ## How it works
 
-<!-- ![System overview](images/system.png) -->
-
-```
-Muse 2  --LSL-->  neuro_train.py  -->  mental_model.pkl
-                                              |
-Muse 2  --LSL-->  pomodoro.py  <--------------+
-                       |
-                     MQTT
-                       |
-                Home Assistant
-                       |
-                    Matter
-                       |
-              IKEA DIRIGERA hub
-                       |
-                    Zigbee
-                       |
-              IKEA TRÅDFRI bulb
-```
+![System overview](images/system.png)
 
 **Calibration** (`neuro_train.py`) records six alternating cycles of 30 s rest
 and 30 s work, about six minutes total. Each one-second window of EEG becomes
@@ -59,7 +41,7 @@ The bulb is RGB and synthesises white from coloured LEDs, so in colour
 temperature mode it only reaches 4000 K, which still looks warm. Cool white is
 therefore set as a point in CIE xy space rather than as a colour temperature.
 
-<!-- ![Three light states](images/states.jpg) -->
+![Three light states](images/states.jpg)
 
 ## Files
 
@@ -90,7 +72,7 @@ extraction assumes four channels.
 Python 3.9 or newer.
 
 ```bash
-git clone https://github.com/<your-username>/neuropomodoro.git
+git clone https://github.com/vanjastankicc/neuropomodoro.git
 cd neuropomodoro
 pip install -r requirements.txt
 ```
@@ -125,7 +107,7 @@ runs in a virtual machine.
    `http://homeassistant.local:8123`. Open it in a browser on the host and
    create your account.
 
-<!-- ![Home Assistant console](images/ha-console.png) -->
+![Home Assistant console](images/ha-console.png)
 
 ### 3. Connect the bulb
 
@@ -138,7 +120,7 @@ runs in a virtual machine.
 5. Note the entity ID of your bulb, for example `light.globe`. You will need it
    in the automation below.
 
-<!-- ![Home Assistant dashboard](images/ha-dashboard.png) -->
+![Home Assistant dashboard](images/ha-dashboard.png)
 
 ### 4. MQTT broker
 
