@@ -19,15 +19,15 @@ Built as a diploma thesis at Računarski fakultet, Univerzitet Union, Belgrade.
 
 ![System overview](images/system.png)
 
-**Calibration** (`neuro_train.py`) records six alternating cycles of 30 s rest
-and 30 s work, about six minutes total. Each one-second window of EEG becomes
+**Calibration** (`neuro_train.py`) records six alternating cycles of 30s rest
+and 30s work, about six minutes total. Each one-second window of EEG becomes
 16 features: band power for delta, theta, alpha and beta on each of the four
 channels. An SVM with an RBF kernel learns the boundary between the two classes
 and is saved to disk.
 
 **Session** (`pomodoro.py`) runs 25-minute work blocks separated by 5-minute
-breaks. Every 0.2 s it classifies the last second of EEG, takes the majority
-vote over the last 5 s, and if "rest" persists for more than 15 s it brightens
+breaks. Every 0.2s it classifies the last second of EEG, takes the majority
+vote over the last 5s, and if "rest" persists for more than 15s it brightens
 the light to full. When work returns, the light drops back. At the end of the
 block the light turns warm and dim for the break.
 
@@ -106,7 +106,7 @@ runs in a virtual machine.
 4. Set the network adapter to **Bridged**, not NAT. The VM needs its own
    address on your LAN so the Python script and the hub can both reach it.
 5. Start the machine. The console prints a URL such as
-   `http://homeassistant.local:8123`. Open it in a browser on the host and
+   `http://192.168.x.x:8123`. Open it in a browser on the host and
    create your account.
 
 ![Home Assistant console](images/ha-console.png)
