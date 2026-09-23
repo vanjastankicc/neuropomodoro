@@ -11,7 +11,9 @@ be ignored, which matters for a system that is sometimes wrong.
 
 Built as a diploma thesis at Računarski fakultet, Univerzitet Union, Belgrade.
 
-![System in use](images/logo.png)
+<p align="center">
+  <img src="images/logo.png" alt="NeuroPomodoro" width="400">
+</p>
 
 ## How it works
 
