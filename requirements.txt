@@ -1,0 +1,8 @@
+numpy
+scipy
+scikit-learn
+joblib
+pylsl
+muselsl
+paho-mqtt
+matplotlib
