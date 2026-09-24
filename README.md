@@ -43,7 +43,9 @@ The bulb is RGB and synthesises white from coloured LEDs, so in colour
 temperature mode it only reaches 4000 K, which still looks warm. Cool white is
 therefore set as a point in CIE xy space rather than as a colour temperature.
 
-![Three light states](images/states.png)
+<p align="center">
+  <img src="images/states.png" alt="Sates">
+</p>
 
 ## Files
 
