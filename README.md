@@ -63,9 +63,8 @@ therefore set as a point in CIE xy space rather than as a colour temperature.
 - A computer with Bluetooth. Windows was used here; see the notes at the end for
   other platforms.
 
-Nothing is tied to IKEA specifically. Any bulb Home Assistant can control will
-work, as will any EEG device that publishes an LSL stream, though the feature
-extraction assumes four channels.
+Nothing is tied to IKEA specifically. Any colour bulb Home Assistant can control will work,
+as will any EEG device that publishes an LSL stream, though the feature extraction assumes four channels.
 
 ## Software setup
 
@@ -105,9 +104,13 @@ runs in a virtual machine.
 3. Give it 2 CPU cores, 4 GB RAM and 32 GB of disk.
 4. Set the network adapter to **Bridged**, not NAT. The VM needs its own
    address on your LAN so the Python script and the hub can both reach it.
-5. Start the machine. The console prints a URL such as
-   `http://192.168.x.x:8123`. Open it in a browser on the host and
-   create your account.
+5. Start the machine. The console prints a Home Assistant URL such as
+http://homeassistant.local:8123, and above it an IPv4 address such as 192.168.0.31.
+Take the Home Assistant URL but swap homeassistant.local for that IP address,
+so http://homeassistant.local:8123 becomes http://192.168.0.31:8123.
+The hostname relies on mDNS, which often fails to resolve on Windows,
+while the IP address always works. Open that in a browser on the host
+and create your account.
 
 ![Home Assistant console](images/ha-console.png)
 
@@ -177,7 +180,7 @@ At the top of `pomodoro.py`:
 
 ```python
 MQTT_HOST = "192.168.x.x"    # the Home Assistant VM's address
-MQTT_USER = "eeg"
+MQTT_USER = "your-username"  # e.g. eeg
 MQTT_PASS = "your-password"
 ```
 
